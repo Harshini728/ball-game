@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Ball Game</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span>Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span>Level:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="stat">
+                    <span>Lives:</span>
+                    <span id="lives">3</span>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div class="controls">
+            <p>🎯 <strong>Controls:</strong> Move mouse left/right to control paddle</p>
+            <button id="startBtn" class="btn btn-primary">Start Game</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <div id="gameOverScreen" class="modal hidden">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Level Reached: <span id="finalLevel">1</span></p>
+                <button id="playAgainBtn" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+
+        <div id="pauseScreen" class="modal hidden">
+            <div class="modal-content">
+                <h2>Game Paused</h2>
+                <p>Click Resume to continue</p>
+                <button id="resumeBtn" class="btn btn-primary">Resume</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
